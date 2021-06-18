@@ -35,6 +35,13 @@ Cocoapods는 iOS 개발에 사용되는 의존성 관리자입니다.
 
 ### 프로젝트 생성
 `npm config set save-exact=true` // 버전 고정
+`react-native init SampleApp`
+
+안드로이드에서 실행
+`npm run android`
+
+ios에서 실행
+`npm run ios`
 
 ![](React-Native_SETUP/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-06-19%20%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB%204.33.30.png)
 
