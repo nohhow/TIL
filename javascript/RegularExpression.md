@@ -182,12 +182,12 @@ source
 source  
 `<div>test</div><div>test2</div>`  
 
-정규표현식 : /<div>.+</div>/  
--> match : **<div>test</div><div>test2</div>**  
+정규표현식 : `<div>.+</div>`  
+-> match : **`<div>test</div><div>test2</div>`**  
 : 탐욕적인(greedy) 수량자  
 
-정규표현식 : /<div>.+?</div>/  
--> match : **<div>test</div>**<div>test2</div>  
+정규표현식 : `<div>.+?</div>`  
+-> match : **`<div>test</div>`**`<div>test2</div>`  
 : 게으른(lazy) 수량자  
 
 - - - -
