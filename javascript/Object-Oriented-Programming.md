@@ -34,5 +34,50 @@ document.write(p.introduce());
 * 객체를 명시하지 않으면 암시적으로 window의 프로퍼티로 간주됨.
 * node.js에서는 global이라는 이름으로 전역객체가 존재
 
+## apply, call
+### 함수도 객체다.
+함수 객체
+`var sum = new Function('x','y', 'return x+y;);`
+* 생성자를 통해서 함수 객체 생성
+* 마지막에 등장하는 인자가 함수의 본문에 해당한다.(나머지는 매개변수가됨)
 
+하지만 일반적으로 함수 객체를 작성할 때는
+`function sum(x,y){return x+y;}`
+이런식으로 작성한다.
+이를 함수 리터럴이라고 한다. Function Literal
+
+일반적으로 객체를 작성하거나 배열을 작성할 때에도 마찬가지이다.
+`var o ={}` 이나 `new Object`
+`var a = [1,2,3]` 이나 `new Array(1,2,3)` 가 같은 의미인 것도 마찬가지이다. 
+
+이러한 문법적 체계를 literal이라고 함.
+
+apply를 통한 this값 제어
+```javascript
+var o = {}
+var p = {}
+function func(){
+    switch(this){
+        case o:
+            document.write('o<br />');
+            break;
+        case p:
+            document.write('p<br />');
+            break;
+        case window:
+            document.write('window<br />');
+            break;          
+    }
+}
+func();
+func.apply(o);
+func.apply(p);
+```
+
+결과
+```
+window
+o
+p
+```
 #Dev/web/javascript
