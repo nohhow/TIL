@@ -40,6 +40,7 @@ document.write(p1.introduce()+"<br />");
 어떠한 객체를 상속받고 싶다면, 그 객체를 생성자의 prototype에 할당 시켜주면 된다.
 아래에서 핵심 코드는 `Programmer.prototype = new Person();`라고 볼 수 있겠다.
 
+code
 ```javascript
 function Person(name){
     this.name = name;
@@ -70,6 +71,7 @@ Programmer.prototype.coding = function(){
 }
 ```
 
+code
 ```javascript
 function Person(name){
     this.name = name;
