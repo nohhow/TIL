@@ -1,7 +1,7 @@
 # 상속
 
-상속(inheritance) = 물려받는 것
-상속은 기존의 로직(부모객체)을 수정하고 변경해서 파생된 새로운 객체를 만들 수 있게 해준다.
+상속(inheritance) = 물려받는 것  
+상속은 기존의 로직(부모객체)을 수정하고 변경해서 파생된 새로운 객체를 만들 수 있게 해준다.  
 -> 재활용
 
 ## Property 생성 방법을 달리 해보자.
@@ -40,6 +40,7 @@ document.write(p1.introduce()+"<br />");
 어떠한 객체를 상속받고 싶다면, 그 객체를 생성자의 prototype에 할당 시켜주면 된다.
 아래에서 핵심 코드는 `Programmer.prototype = new Person();`라고 볼 수 있겠다.
 
+code
 ```javascript
 function Person(name){
     this.name = name;
@@ -70,6 +71,7 @@ Programmer.prototype.coding = function(){
 }
 ```
 
+code
 ```javascript
 function Person(name){
     this.name = name;
