@@ -10,4 +10,48 @@ function()에 e를 인자로 추가하면, 이 e가 바로 우리가 이벤트�
 * preventDefault는 이벤트가 발생한 태그의 기본적인 동작을 막는 기능을 수행한다.
 
 
+### 컴포넌트에 이벤트 생성
+
+컴포넌트에 이벤트를 생성하고, 재사용성도 높이기 위해서는 App 컴포넌트(부모 컴포넌트)에서 함수를 생성하여 자식 컴포넌트에 그 함수를 넘겨주고, 이를 onClick 이벤트 내부에서 props로 호출해주기만 하면 된다.
+
+
+**부모 컴포넌트의 return 부분(props에 넘겨줄 함수 정의- 여기서는 onChangePage)**
+```javascript
+    return (
+      <div className="App">
+        <Subject 
+            title={this.state.subject.title} 
+            sub={this.state.subject.sub}
+            onChangePage = {function() {
+              this.setState({mode : 'welcome'});
+            }.bind(this)}
+            ></Subject>
+        <TOC data={this.state.contents}></TOC>
+        <Content title={_title} desc={_desc}></Content>
+      </div>
+    );
+
+```
+  
+**자식 컴포넌트(이벤트가 실제로 생성되는 곳)**
+```javascript
+class Subject extends Component {
+    render() {
+        console.log('Subject render');
+        return (
+            <header>
+                <h1><a href="/" onClick={function(e) {
+                    e.preventDefault();                 // a 태그 본래의 기능을 막는 역할
+                    this.props.onChangePage();          // props를 통해서 onChangePage 이벤트를 호출하는 모습
+                }.bind(this)}>{this.props.title}</a></h1>
+                {this.props.sub}
+            </header>
+        );
+    }
+}
+
+```
+
+
+
 #Dev/web/React/생활코딩
