@@ -123,7 +123,10 @@ state와 props 간의 복잡한 로직은 아니지만, 이런 식으로 활용 
 
 (추가로 this.setState에서 this를 사용하기 위해서는 함수().bind(this)를 별도로 작성할 필요가 있었다. 왜냐하면 function(e) 는 이름이 없는 함수이기 때문, 즉 이 함수 내부에서 this는 원래 undefined임)
   
+* Read-only
+전달받은 컴포넌트 내부에서 props의 값을 임의로 바꿀 수 없다.
 
+* Can not be modified
 
 
 
