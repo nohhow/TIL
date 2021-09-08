@@ -5,16 +5,37 @@ body{
 }
 
 h1{
-  margin-top: 0;
+  font-size: 5.265rem;
+  color: #66BFBF;
+  margin: 50px auto 0 auto;
   font-family: 'Sacramento', sans-serif;
 }
 
 h2{
+  font-size: 2.5rem;
+  color: #66BFBF;
+  font-weight: normal;
   font-family: 'Montserrat', sans-serif;
 }
 
 h3{
   font-family: 'Montserrat', sans-serif;
+}
+
+h3, a{
+  color : #11999E;
+}
+
+a:hover{
+  color: #EAF6F6
+}
+hr{
+  border-style : none;
+  border-top-style : dotted;
+  border-width : 8px;
+  border-color : #FFDEDE;
+  width : 5%;
+  margin : 100px auto;
 }
 
 .top-cloud{
@@ -29,28 +50,89 @@ h3{
   bottom : 300px;
 }
 
+/* Container 설정 */
 .top-container {
   background-color: #FFDEDE;
   position: relative;
   padding-top: 100px;
+
 }
 
 .middle-container {
+  margin: 100px auto;
 }
 
 .bottom-container {
+  padding : 50px 0;
+  background-color: #66BFBF;
+}
+
+
+.profile > p {
+  color : #40514E;
+}
+
+.skill-row{
+  width:50%;
+  margin: 150px auto;
+  text-align: left;
+}
+
+.skill-row > p{
+  line-height: 2;
+}
+
+.skill-row > img{
+  width: 25%;
+  border-radius: 100%;
+  border:solid #FFDEDE;
+}
+
+.skill-row > h3{
+  color : #11999E;
 }
 
 .programming{
-  width:300px;
-  height:300px;
-  border-radius: 100%;
-  border:solid 1px #FFDEDE;
+  float: left;
+  margin-right:30px;
 }
 
 .baking{
-  width:300px;
-  height:300px;
-  border-radius: 100%;
-  border:solid 1px #FFDEDE;
+  float: right;
+  margin-left:30px;
+}
+
+.btn{
+  display: inline-block;
+  margin-top : 50px;
+  background-color: #66BFBF;
+  color : white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding:10px 20px 10px 20px;
+  border:solid 1px;
+  border-radius: 5px;
+  border-color: #66BFBF;
+}
+
+.contact-me > h3 {
+  margin:50px auto;
+}
+
+.contact-message {
+  width:40%;
+  margin : auto;
+}
+
+.footer-link {
+  display : inline-block;
+  text-decoration: none;
+  color: #11999E;
+  margin : auto 20px;
+  margin-bottom : 50px;
+}
+
+.copyright {
+  color: #EAF6F6;
+  font-size: 0.75rem;
 }
