@@ -12,6 +12,12 @@ web.archive.org
 ### 사진을 동그랗게 CROP하고 싶다면
 crop-circle.imageonline.co
 
+### Lorem Ipsum
+[Lorem Ipsum – Generator, Origins and Meaning](https://loremipsum.io/)
+
+### Icon 찾기
+https://www.flaticon.com/
+
 - - - -
 
 ## CSS
@@ -23,6 +29,12 @@ https://flukeout.github.io/
 
 ### pesticide - element 구분하여 보기(크롬 확장프로그램)
 
+### 사용자의 PC에 많이 설치되어있는 Font 알아보기(Web Safe Font)
+[CSS Font Stack: Web Safe and Web Font Family with HTML and CSS code.](https://www.cssfontstack.com/)
+
+### 버튼 디자인
+[CSS Button Creator - Imageless CSS Button Creator](https://cssbuttoncreator.com/)
+
 - - - -
 
 ## UI/UX
@@ -33,11 +45,20 @@ dailui.co
 canva.com
 - Canva 에서 웹 디자인을 하고, 곧바로 WebSite에서 보는 것처럼 Preview해볼 수 있음
 
+### UI references
+1. ui-patterns.com
+2. https://dribbble.com/
+
+### 빠른 Mock-Up
+[Balsamiq. Rapid, Effective and Fun Wireframing Software | Balsamiq](https://balsamiq.com/)
 - - - -
 
 ## ETC
 ### 키보드 타이핑 연습 
 keybr.com
+
+### Frontend Mentor - Challenge
+[Frontend Mentor | Challenges](https://www.frontendmentor.io/challenges)
 
 
 #Dev/web
