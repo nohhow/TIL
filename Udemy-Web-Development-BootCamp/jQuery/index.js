@@ -36,3 +36,9 @@ $("button").click(function(){
 //     document.querySelector("h1").style.color="purple";
 //   });
 // }
+
+// Web에서 입력하는 KEY 값을 h1에서 보여주기 - Challenge
+
+$(document).keypress(function(event){
+  $("h1").text(event.key);
+});
