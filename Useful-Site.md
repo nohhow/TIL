@@ -18,6 +18,9 @@ crop-circle.imageonline.co
 ### Icon 찾기
 https://www.flaticon.com/
 [Font Awesome](https://fontawesome.com/)
+
+### HTML Save
+[HTML Save : Host HTML WebPage online](https://htmlsave.com/?user=new)
 - - - -
 
 ## CSS
@@ -56,6 +59,16 @@ canva.com
 
 ### 빠른 Mock-Up
 [Balsamiq. Rapid, Effective and Fun Wireframing Software | Balsamiq](https://balsamiq.com/)
+
+### Mobile Friendly Test
+https://search.google.com/test/mobile-friendly
+
+### 이미지로부터 색상 추천
+[Design Seeds | for all who ♥ color | inspiration & color palettes](https://www.design-seeds.com/)
+
+### 보색찾기 : 어도비 칼라
+https://color.adobe.com/ko/create/color-wheel
+
 - - - -
 
 ## ETC
@@ -65,5 +78,9 @@ keybr.com
 ### Frontend Mentor - Challenge
 [Frontend Mentor | Challenges](https://www.frontendmentor.io/challenges)
 
+### 흐름도 그리기
+www.draw.io
 
-#Dev/web
+### Stanford KAREL - 타일에서 로봇 움직이는 프로그램 만들기
+[Karel IDE](https://stanford.edu/~cpiech/karel/ide.html)
+
