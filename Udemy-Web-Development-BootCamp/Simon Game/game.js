@@ -2,6 +2,12 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
 
+$('.btn').click(function(){
+  var userChosenColour = $(this).attr('id');
+  userClickedPattern.push(userChosenColour);
+  playSound(userChosenColour);
+});
+
 function nextSequence(){
   var randomNumber = Math.floor(Math.random() * 4);
 
@@ -11,11 +17,10 @@ function nextSequence(){
 
   $('#'+randomChosenColour).animate({opacity:"0.5"}, 100);
   $('#'+randomChosenColour).animate({opacity:"1"}, 100);
-  const audio = new Audio("sounds/"+randomChosenColour+".mp3");
-  audio.play();
+  playSound(randomChosenColour);
 }
 
-$('.btn').click(function(){
-  var userChosenColour = $(this).attr('id');
-  userClickedPattern.push(userChosenColour);
-});
+function playSound(name){
+  const audio = new Audio("sounds/"+name+".mp3");
+  audio.play();
+}
