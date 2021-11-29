@@ -1,6 +1,6 @@
 //jshint esversion:6
 
-var superheroes = require("superheroes");
+var supervillains = require("supervillains");
 
-var mySuperheroName = superheroes.random();
-console.log(mySuperheroName);
+var mySupervillainsName = supervillains.random();
+console.log(mySupervillainsName);
