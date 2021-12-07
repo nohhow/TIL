@@ -5,7 +5,7 @@ const app = express();
 
 app.get("/", function(req, res){
 
-  const url = "https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=1d3945809db7df2e63d969d63ae200cf&units=metric";
+  const url = "https://api.openweathermap.org/data/2.5/weather?q=Daejeon&appid=1d3945809db7df2e63d969d63ae200cf&units=metric";
   https.get(url, function(response){
     console.log(response.statusCode);
 
@@ -13,13 +13,15 @@ app.get("/", function(req, res){
       const weatherData = JSON.parse(data);
       const temp = weatherData.main.temp;
       const desc = weatherData.weather[0].description;
-      console.log("temp : " + temp);
-      console.log("desc : " + desc)
+      const icon = weatherData.weather[0].icon;
+      const imageURL = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
 
+      res.write("<p>The weather is currently " + desc+"</p>");
+      res.write("<h1>The temperature in Daejoen is " + temp + " degrees Celcius.</h1>");
+      res.write("<img src="+imageURL+"/>");
+      res.send();
     });
   });
-  res.send("Server is up and running");
-
 })
 
 app.listen(3000, function(){
