@@ -10,7 +10,8 @@ require('dotenv').config();
 const app = express();
 
 const api_key = process.env.API_KEY;
-console.log(api_key);
+const list_key = process.env.LIST_KEY;
+
 client.setConfig({apiKey:api_key, server:"us20",});
 
 app.use(express.static("public"));
@@ -31,7 +32,7 @@ app.post("/", function(req, res){
 
   const run = async () => {
     try{
-    const response = await client.lists.addListMember("b0737ca45c", {
+    const response = await client.lists.addListMember(list_key, {
       email_address: subscribingUser.email,
       status: "subscribed",
       merge_fields: {
@@ -54,6 +55,6 @@ app.post("/failure", function(req, res){
   res.redirect("/");
 });
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
   console.log("Server is running on port 3000");
 });
