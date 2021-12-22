@@ -39,7 +39,19 @@ https://flukeout.github.io/
 [CSS Button Creator - Imageless CSS Button Creator](https://cssbuttoncreator.com/)
 
 - - - -
+## Node.js
+### nodemon : 코드에서 바뀐 부분 모니터링하고, 바로 서버에 반영해줌
+```
+npm install -g nodemon
+```
+Error 발생 시 권한 요청 때문일 수 있음, sudo 사용 권장
 
+실행문
+```
+nodemon server.js
+```
+
+- - - -
 ## Bootstrap
 ### Bootstrap element : Bootsnipp
 [Home of free code snippets for Bootstrap](https://bootsnipp.com/)
@@ -78,9 +90,21 @@ keybr.com
 ### Frontend Mentor - Challenge
 [Frontend Mentor | Challenges](https://www.frontendmentor.io/challenges)
 
-### 흐름도 그리기
+### 흐름도(Flowchart) 그리기
 www.draw.io
 
 ### Stanford KAREL - 타일에서 로봇 움직이는 프로그램 만들기
 [Karel IDE](https://stanford.edu/~cpiech/karel/ide.html)
+
+### JSON Viewr Pro : Chrome Extension
+[JSON Viewer Pro - Chrome 웹 스토어](https://chrome.google.com/webstore/detail/json-viewer-pro/eifflpmocdbdmepbjaopkkhbfmdgijcc/related)
+
+### POSTMAN
+[Download Postman | Get Started for Free](https://www.postman.com/downloads/?utm_source=postman-home)
+
+### PlaceHolder Generator
+https://via.placeholder.com/350x350
+
+via.placeholder.com/가로x세로 (px단위)
+
 
