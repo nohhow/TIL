@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2 class="simple-question">골격이 굵거나 살찐 편이다.</h2>
+	<input id="true" class="btn btn-lg" onclick="isTrue()" type="button" value="O"/>
+	<input id="false" class="btn btn-lg" onclick="isFalse()" type="button" value="X"/>
+
+<script>
+	const questions = [
+		["골격이 굵거나 살찐 편이다.", 2, 10],
+		["땀이 많다.", 4, 3],
+		["소심하고 꼼꼼하다.", 6, 5],
+		["움직이는 것을 싫어한다.", 24, 8],
+		["일을 마무리하지 못하면 지나치게 걱정한다.", 25, 7],
+		["소화력이 약해 많이 먹지 못한다.", 26, 24],
+		["있어도 없는 척 실속을 차린다.", 23, 24],
+		["완벽주의자이다.", 23, 9],
+		["음식을 가리지 않고 과식하는 경향이 있다.", 23, 24],
+		["잘 체한다.", 11, 12],
+		["손발이 차다.", 13, 21],
+		["일을 벌여 놓기만 하지 마무리하지 못한다.", 14, 15],
+		["자주 설사한다.", 19, 24],
+		["쉽게 친구를 사귀는 편이다.", 22, 17],
+		["걸음이 얌전하다.", 26, 16],
+		["게으르다.", 24, 18],
+		["몸이 안 좋을 때 땀을 내면 개운하다.", 24, 25],
+		["한 번 감정이 상하면 오래간다.", 25, 26],
+		["물을 거의 먹지 않는다.", 26, 25],
+		["거침이 없고 결단성이 있다.", 23, 25],
+		["음식을 가리지 않고 과식하는 경향이 있다.", 24, 20],
+		["완벽주의자이다.", 24, 25],
+		["태양인"],
+		["태음인"],
+		["소양인"],
+		["소음인"]
+	]
+
+	var currentQuestion =	document.querySelector(".simple-question");
+	// 첫 질문 초기화
+	currentQuestion.innerText = questions[0][0];
+
+	// 다음 질문 초기화 (True 선택시, False 선택시)
+	var arrayNextTrue = questions[0][1];
+	var arrayNextFalse = questions[0][2];
+
+	function isTrue(){
+		var nextQuestionIndex = arrayNextTrue;
+		currentQuestion.innerText = questions[nextQuestionIndex][0];
+		arrayNextTrue = questions[nextQuestionIndex][1];
+		arrayNextFalse = questions[nextQuestionIndex][2];
+	}
+
+	function isFalse(){
+		var nextQuestionIndex = arrayNextFalse;
+		currentQuestion.innerText = questions[nextQuestionIndex][0];
+		arrayNextTrue = questions[nextQuestionIndex][1];
+		arrayNextFalse = questions[nextQuestionIndex][2];
+	}
+
+</script>
+</body>
+</html>
