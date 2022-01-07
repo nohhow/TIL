@@ -4,47 +4,31 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const app = express();
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.set('view engine', 'ejs');
 
 app.get("/", function(req, res){
 
   var today = new Date();
-  var currentDay = today.getDay();
-  var day = "";
 
-  //0 Sun, 1 Mon, 2 Tue, 3 Wed, 4 Thuk, 5 Fri, 6 Sat
-
-  switch (currentDay) {
-    case 0:
-      day = "Sunday";
-      break;
-    case 1:
-      day = "Monday";
-      break;
-    case 2:
-      day = "Tuesday";
-      break;
-    case 3:
-      day = "Wednesday";
-      break;
-    case 4:
-      day = "Thursday";
-      break;
-    case 5:
-      day = "Friday";
-      break;
-    case 6:
-      day = "Saturday";
-      break;
-    default:
-    console.log("Error : current day is equal to: " + currentDay);
+  var options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long"
   }
+
+  var day = today.toLocaleDateString("en-US", options);
 
   res.render("list", {
     KindOfDay: day
   });
 
+});
+
+app.post("/", function(req, res){
+  var toDo = req.body.todo;
+  res.send("<h1>저장됐어욤"+toDo+"</h1>");
 });
 
 app.listen(3000, function(){

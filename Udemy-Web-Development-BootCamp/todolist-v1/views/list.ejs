@@ -5,11 +5,16 @@
     <title>To Do List</title>
   </head>
   <body>
-    <%
-    if(KindOfDay === "Saturday" || KindOfDay === "Sunday"){ %>
-      <h1 style="color : purple"><%= KindOfDay %> ToDo List</h1>
-    <% } else{ %>
-      <h1 style="color : blue"><%= KindOfDay %> ToDo List</h1>
-    <% } %>
+    <h1> <%= KindOfDay%> </h1>
+    <ul>
+      <li>호주 자료 조사</li>
+      <li>오이도 데이트</li>
+      <li>호텔 예약</li>
+    </ul>
+
+    <form action="/" method="post">
+      <input type="text" name="todo" value="">
+      <button type="submit" name="button">저장</button>
+    </form>
   </body>
 </html>
