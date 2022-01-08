@@ -2,34 +2,47 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
+const date = require(__dirname + "/date.js");
 
 const app = express();
-app.use(bodyParser.urlencoded({extended: true}));
+
+const items = ["호주 자료 조사", "오이도 데이트", "호텔예약"];
+const workItems = [];
 
 app.set('view engine', 'ejs');
 
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static("public"));
+
 app.get("/", function(req, res){
-
-  var today = new Date();
-
-  var options = {
-    weekday: "long",
-    day: "numeric",
-    month: "long"
-  }
-
-  var day = today.toLocaleDateString("en-US", options);
-
+  const day = date.getDate();
   res.render("list", {
-    KindOfDay: day
+    listTitle: day,
+    newItemList: items,
   });
 
 });
 
-app.post("/", function(req, res){
-  var toDo = req.body.todo;
-  res.send("<h1>저장됐어욤"+toDo+"</h1>");
+app.get("/work", function(req, res){
+  res.render("list", {
+    listTitle: "Work List",
+    newItemList : workItems
+  });
 });
+
+app.post("/", function(req, res){
+  const item = req.body.newItem;
+  console.log(req.body);
+
+  if(req.body.list === 'Work'){
+    workItems.push(item);
+    res.redirect("/work");
+  } else{
+    items.push(item);
+    res.redirect("/");
+  }
+});
+
 
 app.listen(3000, function(){
   console.log("Server started on port 3000");

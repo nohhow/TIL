@@ -1,20 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>To Do List</title>
-  </head>
-  <body>
-    <h1> <%= KindOfDay%> </h1>
-    <ul>
-      <li>호주 자료 조사</li>
-      <li>오이도 데이트</li>
-      <li>호텔 예약</li>
-    </ul>
+<%- include("header") -%>
 
-    <form action="/" method="post">
-      <input type="text" name="todo" value="">
-      <button type="submit" name="button">저장</button>
-    </form>
-  </body>
-</html>
+    <div class="box" id="heading">
+      <h1> <%= listTitle%> </h1>
+    </div>
+
+    <div class="box">
+      <% for(var i = 0; i< newItemList.length; i++){ %>
+        <div class="item">
+          <input type="checkbox">
+          <p> <%= newItemList[i]%> </p>
+        </div>
+      <% } %>
+
+      <form class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+        <button type="submit" name="list" value=<%= listTitle%>>+</button>
+      </form>
+    </div>
+
+<%- include("footer") -%>
