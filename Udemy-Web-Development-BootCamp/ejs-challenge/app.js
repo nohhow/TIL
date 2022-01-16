@@ -43,7 +43,7 @@ app.get("/compose", function(req, res){
 app.post("/compose", function(req, res){
   const post = {
     title : req.body.compose_title,
-    body : req.body.compose_content
+    content : req.body.compose_content
   };
 
   postArray.push(post);
