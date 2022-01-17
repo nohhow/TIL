@@ -1,9 +1,31 @@
 <%- include("partials/header") -%>
+<style>
+  .float-btn{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:100px;
+    right:100px;
+    color:#FFF;
+    text-align:center;
+  }
+</style>
 
-<% posts.forEach(function(post){%>
-  <% console.log(post.title);%>
-<% }); %>
 <h1>Home</h1>
 <p><%= contents%></p>
+
+<% posts.forEach(function(post){%>
+  <h1><%= post.title %></h1>
+  <% if (post.content.length > 100){%>
+    <p><%= post.content.substr(0,100)+"..." %><a href="posts/<%=post.title%>">Read More</a></p>
+  <% }else{ %>
+    <p><%= post.content %></p>
+  <%}%>
+<% }); %>
+
+<br />
+<div class="float-btn">
+  <button class="btn btn-lg btn-primary" onclick="location.href='/compose'" type="button" name="button">Compose</button>
+</div>
 
 <%- include("partials/footer") -%>
